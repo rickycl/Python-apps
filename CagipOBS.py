@@ -45,7 +45,7 @@ def generer():
     worksheet.write('G1', 'Code PF', bold)
     worksheet.write('H1', 'CodeListe', bold)
     worksheet.write('I1', 'Date Ouverture', bold)
-    worksheet.write('J1', 'Date Résiliation', bold)
+    worksheet.write('J1', 'Date RÃ©siliation', bold)
     worksheet.write('K1', 'Date FDC', bold)
     worksheet.write('L1', 'Type Ligne', bold)
     worksheet.write('M1', 'Abo Principal', bold)
@@ -64,31 +64,31 @@ def generer():
     worksheet.write('Z1', 'Montant TTC', bold)
     worksheet.write('AA1', 'Remise Comm', bold)
     worksheet.write('AB1', 'Montant Appels Nationaux', bold)
-    worksheet.write('AC1', 'Montant Appel Opérateur', bold)
+    worksheet.write('AC1', 'Montant Appel OpÃ©rateur', bold)
     worksheet.write('AD1', 'Montant Appel Autre Ope', bold)
-    worksheet.write('AE1', 'Montant Numéros Spéciaux', bold)
-    worksheet.write('AF1', "Montant Appels Reçus à l'International", bold)
+    worksheet.write('AE1', 'Montant NumÃ©ros SpÃ©ciaux', bold)
+    worksheet.write('AF1', "Montant Appels ReÃ§us Ã  l'International", bold)
     worksheet.write('AG1', 'Montant  Appels France vers International', bold)
-    worksheet.write('AH1', 'Montant Appels émis depuis International', bold)
+    worksheet.write('AH1', 'Montant Appels Ã©mis depuis International', bold)
     worksheet.write('AI1', 'Montant SMS_MMS', bold)
     worksheet.write('AJ1', 'Montant Data BB Nat', bold)
     worksheet.write('AK1', 'Montant Data BB Internat', bold)
     worksheet.write('AL1', 'Montant Data national', bold)
     worksheet.write('AM1', 'Montant Data International', bold)
     worksheet.write('AN1', 'Montant Autres Prestations', bold)
-    worksheet.write('AO1', 'Durée Appels Nationaux', bold)
-    worksheet.write('AP1', 'Unit Appel Opérateur', bold)
+    worksheet.write('AO1', 'DurÃ©e Appels Nationaux', bold)
+    worksheet.write('AP1', 'Unit Appel OpÃ©rateur', bold)
     worksheet.write('AQ1', 'Unit Appel Autre Ope', bold)
-    worksheet.write('AR1', 'Durée Numéros Spéciaux', bold)
-    worksheet.write('AS1', "Durée Appels Reçus à l'International", bold)
-    worksheet.write('AT1', 'Durée Appels France vers International', bold)
-    worksheet.write('AU1', 'Durée Appels émis depuis International', bold)
-    worksheet.write('AV1', 'Quantité SMS_MMS', bold)
+    worksheet.write('AR1', 'DurÃ©e NumÃ©ros SpÃ©ciaux', bold)
+    worksheet.write('AS1', "DurÃ©e Appels ReÃ§us Ã  l'International", bold)
+    worksheet.write('AT1', 'DurÃ©e Appels France vers International', bold)
+    worksheet.write('AU1', 'DurÃ©e Appels Ã©mis depuis International', bold)
+    worksheet.write('AV1', 'QuantitÃ© SMS_MMS', bold)
     worksheet.write('AW1', 'Volume Data BB Nat', bold)
     worksheet.write('AX1', 'Volume Data BB Internat', bold)
     worksheet.write('AY1', 'Volume Data national', bold)
     worksheet.write('AZ1', 'Volume Data International', bold)
-    worksheet.write('BA1', 'Quantité Autres Prestations', bold)
+    worksheet.write('BA1', 'QuantitÃ© Autres Prestations', bold)
     worksheet.write('BB1', 'Nom Utilisateur', bold)
     worksheet.write('BC1', 'Matricule', bold)
     worksheet.write('BD1', 'Code1', bold)
@@ -100,7 +100,7 @@ def generer():
     worksheet.write('BJ1', 'IMEI', bold)
     worksheet.write('BK1', 'Marque', bold)
     worksheet.write('BL1', 'Modele', bold)
-    worksheet.write('BM1', 'Date Réengagement', bold)
+    worksheet.write('BM1', 'Date RÃ©engagement', bold)
     worksheet.write('BN1', 'NoFacture', bold)
     worksheet.write('BO1', 'Sans Conso', bold)
     worksheet.write('BP1', 'LIbCode1', bold)
@@ -109,14 +109,14 @@ def generer():
     worksheet.write('BS1', 'Code3', bold)
     worksheet.write('BT1', 'LibCode3', bold)
 
-    dffac1 = dffac.rename(columns={'Numéro accès':'Ligne'})
-    dffac2 = pd.pivot_table(dffac1, values = ['Quantité (Acte)','Quantité (Volume (Mo))','Quantité (Durée (hh:mm:ss))',
-                                              'Quantité (Volume (Ko))','Quantité (Hors conso)','Montant (€ HT)','Montant TVA',
-                                              'Montant (€ TTC)'], index = ['Ligne'], aggfunc = np.sum)
-    dffac777 = dffac1.drop(['Code groupe','Code entreprise','Numéro compte','Montant (€ HT)','Montant (€ TTC)',
-                        'Montant TVA','Prix Unitaire','Quantité (Acte)','Raison Sociale','Votre référence',
-                        'Quantité (Durée (hh:mm:ss))','Quantité (Hors conso)','Quantité (Volume (Ko))','Numéro facture',
-                        'Quantité (Volume (Mo))','Libellé ligne facture','affectation','Type de charge',
+    dffac1 = dffac.rename(columns={'NumÃ©ro accÃ¨s':'Ligne'})
+    dffac2 = pd.pivot_table(dffac1, values = ['QuantitÃ© (Acte)','QuantitÃ© (Volume (Mo))','QuantitÃ© (DurÃ©e (hh:mm:ss))',
+                                              'QuantitÃ© (Volume (Ko))','QuantitÃ© (Hors conso)','Montant (â‚¬ HT)','Montant TVA',
+                                              'Montant (â‚¬ TTC)'], index = ['Ligne'], aggfunc = np.sum)
+    dffac777 = dffac1.drop(['Code groupe','Code entreprise','NumÃ©ro compte','Montant (â‚¬ HT)','Montant (â‚¬ TTC)',
+                        'Montant TVA','Prix Unitaire','QuantitÃ© (Acte)','Raison Sociale','Votre rÃ©fÃ©rence',
+                        'QuantitÃ© (DurÃ©e (hh:mm:ss))','QuantitÃ© (Hors conso)','QuantitÃ© (Volume (Ko))','NumÃ©ro facture',
+                        'QuantitÃ© (Volume (Mo))','LibellÃ© ligne facture','affectation','Type de charge',
                         'Siren','Taux TVA'], axis=1)
     dffac7777 = dffac777.drop_duplicates('Ligne')
     dffac77777a = dffac7777['Date']
@@ -188,7 +188,7 @@ def generer():
     colL = 11
     for m in range(len(join108)):
         if ((join108[m] == 'BE Smartphone Connect 2016') | (join108[m] == 'BE Abondance 2014') |
-        (join108[m] == 'Business Everywhere illimité 3') | (join108[m] == 'Business Tablette Initial')):
+        (join108[m] == 'Business Everywhere illimitÃ© 3') | (join108[m] == 'Business Tablette Initial')):
             worksheet.write(rowL,colL, 'DATA')
         elif (join108[m] == ''):
             worksheet.write(rowL,colL, '')
@@ -267,7 +267,7 @@ def generer():
     for ax in range(1, len(dffac2)+1):
         worksheet.write(ax,49, 0)
 # AO AV AY U V W --------------------------------------- 6
-    dffac20 = dffac2['Quantité (Durée (hh:mm:ss))']
+    dffac20 = dffac2['QuantitÃ© (DurÃ©e (hh:mm:ss))']
     dffac21 = dffac20.values.tolist()
     rowAO = 1
     colAO = 40
@@ -275,7 +275,7 @@ def generer():
         worksheet.write(rowAO,colAO, ao)
         rowAO +=1
     
-    dffac22 = dffac2['Quantité (Acte)']
+    dffac22 = dffac2['QuantitÃ© (Acte)']
     dffac23 = dffac22.values.tolist()
     rowAV = 1
     colAV = 47
@@ -283,7 +283,7 @@ def generer():
         worksheet.write(rowAV,colAV, av)
         rowAV +=1
     
-    dffac24 = dffac2['Quantité (Volume (Mo))']
+    dffac24 = dffac2['QuantitÃ© (Volume (Mo))']
     dffac25 = dffac24.values.tolist()
     rowAY = 1
     colAY = 50
@@ -294,19 +294,19 @@ def generer():
     dffac26a = dffac1[dffac1['Type de charge']=="Abonnements, forfaits, formules et options"]
     dffac27a = dffac1[dffac1['Type de charge']=="Consommations (hors forfaits)"]
     dffac28a = dffac1[dffac1['Type de charge']=="Services ponctuels"]
-    dffac29a = pd.pivot_table(dffac26a, values = ['Montant (€ HT)'], index = ["Ligne"], aggfunc = np.sum)
-    dffac30a = pd.pivot_table(dffac27a, values = ['Montant (€ HT)'], index = ["Ligne"], aggfunc = np.sum)
-    dffac31a = pd.pivot_table(dffac28a, values = ['Montant (€ HT)'], index = ["Ligne"], aggfunc = np.sum)
+    dffac29a = pd.pivot_table(dffac26a, values = ['Montant (â‚¬ HT)'], index = ["Ligne"], aggfunc = np.sum)
+    dffac30a = pd.pivot_table(dffac27a, values = ['Montant (â‚¬ HT)'], index = ["Ligne"], aggfunc = np.sum)
+    dffac31a = pd.pivot_table(dffac28a, values = ['Montant (â‚¬ HT)'], index = ["Ligne"], aggfunc = np.sum)
     
-    join150re = dffac29a.rename(columns={'Montant (€ HT)':'MT ABO'})
+    join150re = dffac29a.rename(columns={'Montant (â‚¬ HT)':'MT ABO'})
     join150 = pd.merge(dffac2, join150re, on='Ligne',how='left')
     join151 = join150.fillna('')
     
-    join152re = dffac30a.rename(columns={'Montant (€ HT)':'MT CON'}) 
+    join152re = dffac30a.rename(columns={'Montant (â‚¬ HT)':'MT CON'}) 
     join152 = pd.merge(dffac2, join152re, on='Ligne',how='left')  
     join153 = join152.fillna(0)
     
-    join154re = dffac31a.rename(columns={'Montant (€ HT)':'MT DIVERS'})
+    join154re = dffac31a.rename(columns={'Montant (â‚¬ HT)':'MT DIVERS'})
     join154 = pd.merge(dffac2, join154re, on='Ligne',how='left')
     join155 = join154.fillna(0)
     
@@ -335,41 +335,41 @@ def generer():
         rowW +=1
         
 # -----------------------------------------------------------------------------------
-    dffac80 = dffac1[dffac1['affectation']=="Appels émis depuis l'international"]
-    dffac170 = pd.pivot_table(dffac80, values = ['Quantité (Durée (hh:mm:ss))', 'Montant (€ HT)'], index = ["Ligne"], aggfunc = np.sum)
-    dffac17ren = dffac170.rename(columns={'Quantité (Durée (hh:mm:ss))': 'AEDI QD', 'Montant (€ HT)': 'AEDI MTHT'})
+    dffac80 = dffac1[dffac1['affectation']=="Appels Ã©mis depuis l'international"]
+    dffac170 = pd.pivot_table(dffac80, values = ['QuantitÃ© (DurÃ©e (hh:mm:ss))', 'Montant (â‚¬ HT)'], index = ["Ligne"], aggfunc = np.sum)
+    dffac17ren = dffac170.rename(columns={'QuantitÃ© (DurÃ©e (hh:mm:ss))': 'AEDI QD', 'Montant (â‚¬ HT)': 'AEDI MTHT'})
 
-    dffac90 = dffac1[dffac1['affectation']=="Appels émis vers international depuis la France"]
-    dffac180 = pd.pivot_table(dffac90, values = ['Quantité (Durée (hh:mm:ss))', 'Montant (€ HT)'], index = ["Ligne"], aggfunc = np.sum)
-    dffac18ren = dffac180.rename(columns={'Quantité (Durée (hh:mm:ss))': 'AEVIDF QD', 'Montant (€ HT)': 'AEVIDF MTHT' })
+    dffac90 = dffac1[dffac1['affectation']=="Appels Ã©mis vers international depuis la France"]
+    dffac180 = pd.pivot_table(dffac90, values = ['QuantitÃ© (DurÃ©e (hh:mm:ss))', 'Montant (â‚¬ HT)'], index = ["Ligne"], aggfunc = np.sum)
+    dffac18ren = dffac180.rename(columns={'QuantitÃ© (DurÃ©e (hh:mm:ss))': 'AEVIDF QD', 'Montant (â‚¬ HT)': 'AEVIDF MTHT' })
 
     dffac100 = dffac1[dffac1['affectation']=="Appels nationaux"]
-    dffac190 = pd.pivot_table(dffac100, values = ['Quantité (Durée (hh:mm:ss))', 'Montant (€ HT)'], index = ["Ligne"], aggfunc = np.sum)
-    dffac19ren = dffac190.rename(columns={'Quantité (Durée (hh:mm:ss))': 'Ap Nat QD', 'Montant (€ HT)': 'Ap Nat MTHT'})
+    dffac190 = pd.pivot_table(dffac100, values = ['QuantitÃ© (DurÃ©e (hh:mm:ss))', 'Montant (â‚¬ HT)'], index = ["Ligne"], aggfunc = np.sum)
+    dffac19ren = dffac190.rename(columns={'QuantitÃ© (DurÃ©e (hh:mm:ss))': 'Ap Nat QD', 'Montant (â‚¬ HT)': 'Ap Nat MTHT'})
 
-    dffac110 = dffac1[dffac1['affectation']=="Appels Numéros spéciaux"]
-    dffac200 = pd.pivot_table(dffac110, values = ['Quantité (Durée (hh:mm:ss))', 'Montant (€ HT)'], index = ["Ligne"], aggfunc = np.sum)
-    dffac20ren = dffac200.rename(columns={'Quantité (Durée (hh:mm:ss))': 'ANS QD', 'Montant (€ HT)': 'ANS MTHT'})
+    dffac110 = dffac1[dffac1['affectation']=="Appels NumÃ©ros spÃ©ciaux"]
+    dffac200 = pd.pivot_table(dffac110, values = ['QuantitÃ© (DurÃ©e (hh:mm:ss))', 'Montant (â‚¬ HT)'], index = ["Ligne"], aggfunc = np.sum)
+    dffac20ren = dffac200.rename(columns={'QuantitÃ© (DurÃ©e (hh:mm:ss))': 'ANS QD', 'Montant (â‚¬ HT)': 'ANS MTHT'})
 
-    dffac120 = dffac1[dffac1['affectation']=="Appels reçu à l'international"]
-    dffac210 = pd.pivot_table(dffac120, values = ['Quantité (Durée (hh:mm:ss))', 'Montant (€ HT)'], index = ["Ligne"], aggfunc = np.sum)
-    dffac21ren = dffac210.rename(columns={'Quantité (Durée (hh:mm:ss))': 'ARAI QD', 'Montant (€ HT)': 'ARAI MTHT'})
+    dffac120 = dffac1[dffac1['affectation']=="Appels reÃ§u Ã  l'international"]
+    dffac210 = pd.pivot_table(dffac120, values = ['QuantitÃ© (DurÃ©e (hh:mm:ss))', 'Montant (â‚¬ HT)'], index = ["Ligne"], aggfunc = np.sum)
+    dffac21ren = dffac210.rename(columns={'QuantitÃ© (DurÃ©e (hh:mm:ss))': 'ARAI QD', 'Montant (â‚¬ HT)': 'ARAI MTHT'})
 # ------------------------------------------------------------------------------------------------------------------------    
     dffac130 = dffac1[dffac1['affectation']=="Autres prestations"]
-    dffac220 = pd.pivot_table(dffac130, values = ['Quantité (Acte)', 'Montant (€ HT)'], index = ["Ligne"], aggfunc = np.sum)
-    dffac22ren = dffac220.rename(columns={'Quantité (Acte)': 'Aut Pres QA', 'Montant (€ HT)': 'Aut Pres MTHT'})
+    dffac220 = pd.pivot_table(dffac130, values = ['QuantitÃ© (Acte)', 'Montant (â‚¬ HT)'], index = ["Ligne"], aggfunc = np.sum)
+    dffac22ren = dffac220.rename(columns={'QuantitÃ© (Acte)': 'Aut Pres QA', 'Montant (â‚¬ HT)': 'Aut Pres MTHT'})
 
     dffac140 = dffac1[dffac1['affectation']=="Data international"]
-    dffac230 = pd.pivot_table(dffac140, values = ['Quantité (Volume (Mo))', 'Montant (€ HT)'], index = ["Ligne"], aggfunc = np.sum)
-    dffac23ren = dffac230.rename(columns={'Quantité (Volume (Mo))': 'Dat Int QVm', 'Montant (€ HT)': 'Dat Int MTHT'})
+    dffac230 = pd.pivot_table(dffac140, values = ['QuantitÃ© (Volume (Mo))', 'Montant (â‚¬ HT)'], index = ["Ligne"], aggfunc = np.sum)
+    dffac23ren = dffac230.rename(columns={'QuantitÃ© (Volume (Mo))': 'Dat Int QVm', 'Montant (â‚¬ HT)': 'Dat Int MTHT'})
     
     dffac150 = dffac1[dffac1['affectation']=="Data national"]
-    dffac240 = pd.pivot_table(dffac150, values = ['Quantité (Volume (Mo))', 'Montant (€ HT)'], index = ["Ligne"], aggfunc = np.sum)
-    dffac24ren = dffac240.rename(columns={'Quantité (Volume (Mo))': 'Dat Nat QVm', 'Montant (€ HT)': 'Dat Nat MTHT'})
+    dffac240 = pd.pivot_table(dffac150, values = ['QuantitÃ© (Volume (Mo))', 'Montant (â‚¬ HT)'], index = ["Ligne"], aggfunc = np.sum)
+    dffac24ren = dffac240.rename(columns={'QuantitÃ© (Volume (Mo))': 'Dat Nat QVm', 'Montant (â‚¬ HT)': 'Dat Nat MTHT'})
     
     dffac160 = dffac1[dffac1['affectation']=="SMS_MMS"]
-    dffac250 = pd.pivot_table(dffac160, values = ['Quantité (Acte)', 'Montant (€ HT)'], index = ["Ligne"], aggfunc = np.sum)
-    dffac25ren = dffac220.rename(columns={'Quantité (Acte)': 'SMS_MMS QA', 'Montant (€ HT)': 'SMS_MMS MTHT'})
+    dffac250 = pd.pivot_table(dffac160, values = ['QuantitÃ© (Acte)', 'Montant (â‚¬ HT)'], index = ["Ligne"], aggfunc = np.sum)
+    dffac25ren = dffac220.rename(columns={'QuantitÃ© (Acte)': 'SMS_MMS QA', 'Montant (â‚¬ HT)': 'SMS_MMS MTHT'})
     
     join10 = pd.merge(dffac2, dffac17ren, on='Ligne',how='left')
     join11 = pd.merge(join10, dffac18ren, on='Ligne',how='left')
@@ -505,12 +505,12 @@ def generer():
     
 # D G X Y Z BN -------------------------------------------6
     dffac11 = pd.pivot_table(dffac1, index = ['Ligne'])
-    dffac12 = dffac11.drop(['Code groupe','Montant (€ HT)','Montant (€ TTC)','Montant TVA','Prix Unitaire','Quantité (Acte)',
-                   'Quantité (Durée (hh:mm:ss))','Quantité (Hors conso)','Quantité (Volume (Ko))','Quantité (Volume (Mo))',
+    dffac12 = dffac11.drop(['Code groupe','Montant (â‚¬ HT)','Montant (â‚¬ TTC)','Montant TVA','Prix Unitaire','QuantitÃ© (Acte)',
+                   'QuantitÃ© (DurÃ©e (hh:mm:ss))','QuantitÃ© (Hors conso)','QuantitÃ© (Volume (Ko))','QuantitÃ© (Volume (Mo))',
                    'Siren','Taux TVA'], axis=1)
     join = pd.merge(dffac2, dffac12, on='Ligne',how='left')
     
-    join1 = join['Numéro compte']
+    join1 = join['NumÃ©ro compte']
     join3 = join1.values.tolist()
     rowG = 1
     colG = 6
@@ -524,7 +524,7 @@ def generer():
         worksheet.write(rowD,colD, d)
         rowD +=1
         
-    join2 = join['Numéro facture']
+    join2 = join['NumÃ©ro facture']
     join4 = join2.values.tolist()
     rowBN = 1
     colBN = 65
@@ -532,9 +532,9 @@ def generer():
         worksheet.write(rowBN,colBN, bn)
         rowBN +=1
 
-    dffac5 = dffac2['Montant (€ HT)']
+    dffac5 = dffac2['Montant (â‚¬ HT)']
     dffac6 = dffac2['Montant TVA']
-    dffac7 = dffac2['Montant (€ TTC)']
+    dffac7 = dffac2['Montant (â‚¬ TTC)']
     
     dffac8 = dffac5.values.tolist()
     rowX = 1
@@ -588,7 +588,7 @@ def generer():
         rowBO += 1
                            
 # BB:BD, BJ -------------------------------------------------------------- EDP NGC
-    dfngc1 = dfngc.rename(columns={'Numéro accès':'Ligne'})
+    dfngc1 = dfngc.rename(columns={'NumÃ©ro accÃ¨s':'Ligne'})
     
     listA = dfngc1['Ligne'].tolist()
     listB = dfngc1['Nom Utilisateur'].tolist()
@@ -646,13 +646,13 @@ def generer():
 myButtonfacdynam = Button(root,text="Lecture du fichier Facture Dynamique",command=choosefacdynam)
 myButtonfacdynam.pack(pady=15)
 
-myButtonedpop = Button(root,text="Lecture du fichier EDP Opérateur",command=chooseedpop)
+myButtonedpop = Button(root,text="Lecture du fichier EDP OpÃ©rateur",command=chooseedpop)
 myButtonedpop.pack(pady=15)
 
 myButtonedpngc = Button(root,text="Lecture du fichier EDP NGC",command=chooseedpngc)
 myButtonedpngc.pack(pady=15)
 
-myButtongen = Button(root,text="Créer le fichier d'import",command=generer)
+myButtongen = Button(root,text="CrÃ©er le fichier d'import",command=generer)
 myButtongen.pack(pady=50)
 
 root.mainloop()
